@@ -1,0 +1,14 @@
+C:\Users\Lenovo\source\repos\WindowsFormsClinica\WindowsFormsClinica\bin\Debug\WindowsFormsClinica.exe.config
+C:\Users\Lenovo\source\repos\WindowsFormsClinica\WindowsFormsClinica\bin\Debug\WindowsFormsClinica.exe
+C:\Users\Lenovo\source\repos\WindowsFormsClinica\WindowsFormsClinica\bin\Debug\WindowsFormsClinica.pdb
+C:\Users\Lenovo\source\repos\WindowsFormsClinica\WindowsFormsClinica\obj\Debug\WindowsFormsClinica.Properties.Resources.resources
+C:\Users\Lenovo\source\repos\WindowsFormsClinica\WindowsFormsClinica\obj\Debug\WindowsFormsClinica.UserControl1.resources
+C:\Users\Lenovo\source\repos\WindowsFormsClinica\WindowsFormsClinica\obj\Debug\WindowsFormsClinica.UserControl2.resources
+C:\Users\Lenovo\source\repos\WindowsFormsClinica\WindowsFormsClinica\obj\Debug\WindowsFormsClinica.csproj.GenerateResource.cache
+C:\Users\Lenovo\source\repos\WindowsFormsClinica\WindowsFormsClinica\obj\Debug\WindowsFormsClinica.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\WindowsFormsClinica\WindowsFormsClinica\obj\Debug\WindowsFormsClinica.exe
+C:\Users\Lenovo\source\repos\WindowsFormsClinica\WindowsFormsClinica\obj\Debug\WindowsFormsClinica.pdb
+C:\Users\Lenovo\source\repos\WindowsFormsClinica\WindowsFormsClinica\obj\Debug\WindowsFormsClinica.UserControl3.resources
+C:\Users\Lenovo\source\repos\WindowsFormsClinica\WindowsFormsClinica\obj\Debug\WindowsFormsClinica.csprojAssemblyReference.cache
+C:\Users\Lenovo\source\repos\WindowsFormsClinica\WindowsFormsClinica\obj\Debug\WindowsFormsClinica.Form1.resources
+C:\Users\Lenovo\source\repos\WindowsFormsClinica\WindowsFormsClinica\obj\Debug\WindowsFormsClinica.UserControl4.resources

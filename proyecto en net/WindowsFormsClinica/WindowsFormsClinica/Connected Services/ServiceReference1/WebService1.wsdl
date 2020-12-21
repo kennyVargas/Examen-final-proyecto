@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="listaHorarios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="i" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listaHorariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listaHorariosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarReserva">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="m" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="h" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="r" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarReservaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarReservaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNombrePaciente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="i" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNombrePacienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNombrePacienteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarPaciente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="n" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ap" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sexo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarPacienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarPacienteResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarUsuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Autentificar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="user" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutentificarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AutentificarResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listaPacientes">
+        <s:complexType />
+      </s:element>
+      <s:element name="listaPacientesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listaPacientesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DatoMedico">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="i" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DatoMedicoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DatoMedicoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaReservas">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListaReservasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaReservasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="listaHorariosSoapIn">
+    <wsdl:part name="parameters" element="tns:listaHorarios" />
+  </wsdl:message>
+  <wsdl:message name="listaHorariosSoapOut">
+    <wsdl:part name="parameters" element="tns:listaHorariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarReservaSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarReserva" />
+  </wsdl:message>
+  <wsdl:message name="InsertarReservaSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarReservaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNombrePacienteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNombrePaciente" />
+  </wsdl:message>
+  <wsdl:message name="GetNombrePacienteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNombrePacienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarPacienteSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarPaciente" />
+  </wsdl:message>
+  <wsdl:message name="InsertarPacienteSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarPacienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="InsertarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutentificarSoapIn">
+    <wsdl:part name="parameters" element="tns:Autentificar" />
+  </wsdl:message>
+  <wsdl:message name="AutentificarSoapOut">
+    <wsdl:part name="parameters" element="tns:AutentificarResponse" />
+  </wsdl:message>
+  <wsdl:message name="listaPacientesSoapIn">
+    <wsdl:part name="parameters" element="tns:listaPacientes" />
+  </wsdl:message>
+  <wsdl:message name="listaPacientesSoapOut">
+    <wsdl:part name="parameters" element="tns:listaPacientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DatoMedicoSoapIn">
+    <wsdl:part name="parameters" element="tns:DatoMedico" />
+  </wsdl:message>
+  <wsdl:message name="DatoMedicoSoapOut">
+    <wsdl:part name="parameters" element="tns:DatoMedicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaReservasSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaReservas" />
+  </wsdl:message>
+  <wsdl:message name="ListaReservasSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaReservasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="listaHorarios">
+      <wsdl:input message="tns:listaHorariosSoapIn" />
+      <wsdl:output message="tns:listaHorariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarReserva">
+      <wsdl:input message="tns:InsertarReservaSoapIn" />
+      <wsdl:output message="tns:InsertarReservaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNombrePaciente">
+      <wsdl:input message="tns:GetNombrePacienteSoapIn" />
+      <wsdl:output message="tns:GetNombrePacienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPaciente">
+      <wsdl:input message="tns:InsertarPacienteSoapIn" />
+      <wsdl:output message="tns:InsertarPacienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarUsuario">
+      <wsdl:input message="tns:InsertarUsuarioSoapIn" />
+      <wsdl:output message="tns:InsertarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Autentificar">
+      <wsdl:input message="tns:AutentificarSoapIn" />
+      <wsdl:output message="tns:AutentificarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listaPacientes">
+      <wsdl:input message="tns:listaPacientesSoapIn" />
+      <wsdl:output message="tns:listaPacientesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DatoMedico">
+      <wsdl:input message="tns:DatoMedicoSoapIn" />
+      <wsdl:output message="tns:DatoMedicoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaReservas">
+      <wsdl:input message="tns:ListaReservasSoapIn" />
+      <wsdl:output message="tns:ListaReservasSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="listaHorarios">
+      <soap:operation soapAction="http://tempuri.org/listaHorarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarReserva">
+      <soap:operation soapAction="http://tempuri.org/InsertarReserva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNombrePaciente">
+      <soap:operation soapAction="http://tempuri.org/GetNombrePaciente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPaciente">
+      <soap:operation soapAction="http://tempuri.org/InsertarPaciente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarUsuario">
+      <soap:operation soapAction="http://tempuri.org/InsertarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Autentificar">
+      <soap:operation soapAction="http://tempuri.org/Autentificar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaPacientes">
+      <soap:operation soapAction="http://tempuri.org/listaPacientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DatoMedico">
+      <soap:operation soapAction="http://tempuri.org/DatoMedico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaReservas">
+      <soap:operation soapAction="http://tempuri.org/ListaReservas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="listaHorarios">
+      <soap12:operation soapAction="http://tempuri.org/listaHorarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarReserva">
+      <soap12:operation soapAction="http://tempuri.org/InsertarReserva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNombrePaciente">
+      <soap12:operation soapAction="http://tempuri.org/GetNombrePaciente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPaciente">
+      <soap12:operation soapAction="http://tempuri.org/InsertarPaciente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/InsertarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Autentificar">
+      <soap12:operation soapAction="http://tempuri.org/Autentificar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaPacientes">
+      <soap12:operation soapAction="http://tempuri.org/listaPacientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DatoMedico">
+      <soap12:operation soapAction="http://tempuri.org/DatoMedico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaReservas">
+      <soap12:operation soapAction="http://tempuri.org/ListaReservas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="https://localhost:44350/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="https://localhost:44350/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,32 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor {
+    border: solid 2px black;
+    margin: 80px 70px;
+    text-align: center;
+    height: 250px;
+    background: #bacbd0;
+}
+
+h1 {
+    background: #2f587b;
+    ;
+}
+
+ul li {
+    text-decoration: none;
+    list-style: none;
+    padding: 30px;
+}
+
+.botton {
+ 
+    border: solid 2px #00c4ff;
+    padding: 10px;
+    background: #00050a;
+    color: white;
+    width:270px;
+}

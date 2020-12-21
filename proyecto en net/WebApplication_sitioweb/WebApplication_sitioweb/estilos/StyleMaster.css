@@ -1,0 +1,53 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+}
+header {
+    padding: 30px;
+    background: #aff4ff;
+    border: solid 2px black;
+    color: #030e44;
+}
+.info {
+    position: relative;
+    border: solid 2px black;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+    height: 490px;
+}
+
+
+
+div.v1 {
+    border: solid 2px black;
+    float: left;
+    width: 30%;
+    height: 477px;
+}
+
+div.v2 {
+    border: solid 2px black;
+    float: right;
+    width: 68%;
+}
+
+ul li {
+    list-style: none;
+   
+    margin: 30px;
+    height: 27px;
+    width: 234px;
+}
+
+ul li a{
+    text-decoration:none; 
+    color:black;
+}
+
+    ul li .usuario {
+        color: red;
+        margin: 0;
+        padding: 0;
+        height:0;
+    }
